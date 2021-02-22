@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img</title>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>이미지관련</h1>
+    <img src="sample/image/flower1.PNG" alt="꽃사진" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSdh2HdzD01m33d4AsHvh8gKyF67i4CXtCtQ&usqp=CAU" alt="금낭화" />
+    <img src="https://encrypted-tㅁㄴㅇ" alt="금낭화" />
+
+    <hr>
+    <h2>절대값 | 상대값</h2>
+    <div>
+        <!-- px픽셀 절대값이므로, 화면(viewport)가 변해도 너비/높이가 변하지 않는다. -->
+        <img src="sample/image/flower1.PNG" style="width: 250px;"/>
+        <img src="sample/image/flower2.PNG" style="width: 250px;"/>
+        <img src="sample/image/flower3.PNG" style="width: 250px;"/>
+        <img src="sample/image/flower4.PNG" style="width: 250px;"/>
+    </div>
+    <hr>
+    <div>
+        <!-- %는 상대값이므로, 화면(viewport)대비 너비/높이값이 변한다. -->
+        <img src="sample/image/flower1.PNG" style="width: 23%;"/>
+        <img src="sample/image/flower2.PNG" style="width: 23%;"/>
+        <img src="sample/image/flower3.PNG" style="width: 23%;"/>
+        <img src="sample/image/flower4.PNG" style="width: 23%;"/>
+    </div>
+
+    <h2>이미지링크</h2>
+    <a href="http://w3schools.com" title="와삼스쿨로 이동하기">
+        <img src="sample/image/tiger.jpg" alt="타이거사진">
+    </a>
+
+    <h3>image map</h3>
+    <img src="sample/image/river1.PNG" style="width: 500px;" alt="두물머리사진" usemap="#mymap">
+    <map name="mymap">
+        <!-- shape = rect | circle | poly -->
+        <area shape="rect" coords="0,0,250,333" href="http://google.com" alt="구글이동">
+        <area shape="rect" coords="250,0,500,333" href="http://naver.com" alt="네이버이동">
+    </map>
+
+    <h2>이미지배치</h2>
+    <!-- div>img+p>lorem*10 -->
+    <div>
+        <img src="sample/image/forest1.PNG" style="float: left;">
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ipsum ratione sint tenetur, dolor hic error! Eaque, ad perspiciatis laborum recusandae amet velit veniam nam eum. Tempore repellendus eligendi quisquam.</span><span>Eveniet, harum. Atque, nostrum illum! Tempore magnam, eius quos quis numquam sint. Dolores neque, dolorum doloremque non autem corporis placeat earum necessitatibus nihil vero, fuga temporibus possimus, maiores pariatur veritatis.</span><span>Et quia aut quas temporibus? Quo consequuntur excepturi, eius repellat asperiores possimus suscipit expedita quia consequatur accusantium culpa quos odit sunt, corrupti dolorum pariatur sequi ratione inventore? Ullam, autem expedita?</span><span>Dignissimos deserunt, hic iste necessitatibus modi cumque excepturi nulla voluptatum perferendis id natus, omnis ducimus quasi iusto, totam rerum quo iure amet. Ipsa nihil repudiandae hic quidem, quas eos maxime.</span><span>Odit accusamus libero ipsa sunt distinctio doloribus iure ad animi voluptate rem provident illo repudiandae reiciendis facilis delectus porro quos quia, quasi illum et expedita. Doloremque, excepturi quod? Inventore, neque?</span><span>Assumenda ea aut doloremque unde possimus, tempore, fugit ex inventore eos, dolore dignissimos. Vitae incidunt est numquam nam consequuntur nisi, vero adipisci totam doloremque alias, placeat corporis blanditiis corrupti tempore.</span><span>Sapiente consequatur nihil earum error assumenda laudantium dolor aut amet? Provident quas veritatis, sit exercitationem sapiente recusandae laudantium magni cum ut repellendus eos, illo ullam a sint architecto cupiditate culpa?</span><span>Impedit quam quas libero reiciendis veritatis, ad provident cupiditate voluptas sequi perspiciatis sit doloremque hic porro excepturi. Dolorum perferendis totam ullam nemo, praesentium veniam quia rerum quasi facere neque sequi?</span><span>Tenetur fugiat excepturi cupiditate distinctio architecto ratione nihil recusandae blanditiis neque commodi at tempora, natus quos! Labore atque culpa nihil, eos ab veritatis quidem laudantium voluptas provident sit maxime cupiditate!</span><span>Minima eius assumenda nobis. Temporibus consectetur vel qui, ab saepe recusandae, quam dolore soluta optio commodi dolorum. Illum, possimus. Distinctio suscipit ratione iusto porro minus earum quos aliquid nemo dolorum.</span></p>
+    </div>
+    <div>
+        <img src="sample/image/forest1.PNG" style="float: right;">
+        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo ipsum ratione sint tenetur, dolor hic error! Eaque, ad perspiciatis laborum recusandae amet velit veniam nam eum. Tempore repellendus eligendi quisquam.</span><span>Eveniet, harum. Atque, nostrum illum! Tempore magnam, eius quos quis numquam sint. Dolores neque, dolorum doloremque non autem corporis placeat earum necessitatibus nihil vero, fuga temporibus possimus, maiores pariatur veritatis.</span><span>Et quia aut quas temporibus? Quo consequuntur excepturi, eius repellat asperiores possimus suscipit expedita quia consequatur accusantium culpa quos odit sunt, corrupti dolorum pariatur sequi ratione inventore? Ullam, autem expedita?</span><span>Dignissimos deserunt, hic iste necessitatibus modi cumque excepturi nulla voluptatum perferendis id natus, omnis ducimus quasi iusto, totam rerum quo iure amet. Ipsa nihil repudiandae hic quidem, quas eos maxime.</span><span>Odit accusamus libero ipsa sunt distinctio doloribus iure ad animi voluptate rem provident illo repudiandae reiciendis facilis delectus porro quos quia, quasi illum et expedita. Doloremque, excepturi quod? Inventore, neque?</span><span>Assumenda ea aut doloremque unde possimus, tempore, fugit ex inventore eos, dolore dignissimos. Vitae incidunt est numquam nam consequuntur nisi, vero adipisci totam doloremque alias, placeat corporis blanditiis corrupti tempore.</span><span>Sapiente consequatur nihil earum error assumenda laudantium dolor aut amet? Provident quas veritatis, sit exercitationem sapiente recusandae laudantium magni cum ut repellendus eos, illo ullam a sint architecto cupiditate culpa?</span><span>Impedit quam quas libero reiciendis veritatis, ad provident cupiditate voluptas sequi perspiciatis sit doloremque hic porro excepturi. Dolorum perferendis totam ullam nemo, praesentium veniam quia rerum quasi facere neque sequi?</span><span>Tenetur fugiat excepturi cupiditate distinctio architecto ratione nihil recusandae blanditiis neque commodi at tempora, natus quos! Labore atque culpa nihil, eos ab veritatis quidem laudantium voluptas provident sit maxime cupiditate!</span><span>Minima eius assumenda nobis. Temporibus consectetur vel qui, ab saepe recusandae, quam dolore soluta optio commodi dolorum. Illum, possimus. Distinctio suscipit ratione iusto porro minus earum quos aliquid nemo dolorum.</span></p>
+    </div>
+
+</body>
+</html>
