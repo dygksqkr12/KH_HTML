@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css - align</title>
+  </head>
+  <body>
+    <h1>정렬 align</h1>
+    <!--
+    가운데 정렬시
+    1. inline 요소 : 부모 block요소에 text-align속성을 지정
+    2. block 요소 : 스스로에게 margin속성을 이용해 지정
+  -->
+    <!-- div.wrapper>span -->
+    <div class="wrapper">
+      <h3>허허허</h3>
+      <span>안녕하세요 :)</span>
+    </div>
+    <style>
+      .wrapper {
+        background-color: gold;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        /* 방향 top - right - bottom - left*/
+        /* top/bottom left/right */
+        margin: 10px auto; /* margin-left = margin-right */
+      }
+    </style>
+    <h2>텍스트 정렬</h2>
+    <p id="t-align">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
+      explicabo perferendis modi dolorem quam nihil corrupti eos, at molestias
+      illo incidunt deleniti reprehenderit. Est impedit cumque laudantium, vel
+      exercitationem saepe. Modi quis cumque tempora magni doloremque fugiat?
+      Illo magni voluptatibus cumque voluptatem dolorum tenetur reiciendis.
+      Expedita dolore rerum temporibus praesentium vitae eos doloremque aliquid
+      eligendi. Molestias provident doloribus alias quam?
+    </p>
+    <style>
+      #t-align {
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>

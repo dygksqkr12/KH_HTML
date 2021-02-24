@@ -252,5 +252,28 @@
         background-color: darkslategray;
       }
     </style>
+
+    <h2>선택자 우선순위</h2>
+    <dir class="wrapper"></dir>
+    <div id="mydiv" class="test" style="background-color: blueviolet">
+      우선순위 테스트
+    </div>
+    <style>
+      /* 태그 -> 속성 -> 클래스 -> 아이디 -> 인라인속성 -> !improtant */
+      #mydiv {
+        background-color: bisque;
+      }
+      .test {
+        background-color: aqua;
+      }
+      .wrapper .test {
+        font-size: 36px;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        background-color: coral !important;
+      }
+    </style>
   </body>
 </html>

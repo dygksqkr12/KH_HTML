@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css - paragraph</title>
+  </head>
+  <body>
+    <h1>문단</h1>
+    <div class="wrapper">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint esse ea
+        quibusdam quaerat corrupti placeat ad illum pariatur reprehenderit in.
+        Consequuntur totam placeat laudantium hic reprehenderit ut illum porro!
+        Animi!
+      </p>
+      <p>
+        Morem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+        libero perferendis id laudantium animi veritatis iusto optio, nobis
+        consectetur porro nostrum praesentium earum perspiciatis dolorum hic
+        sunt est, veniam deserunt?
+      </p>
+      <p>
+        Horem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+        deleniti consectetur adipisci vitae sunt cum iure, earum suscipit
+        eligendi quod cupiditate labore ratione, iusto mollitia itaque
+        explicabo, culpa incidunt dolores!
+      </p>
+      <p>
+        Torem ipsum dolor, sit amet consectetur adipisicing elit. Iste quo et,
+        rerum optio officiis tenetur, obcaecati, sed voluptatibus doloribus
+        pariatur corporis incidunt. Accusantium veritatis nihil vitae a eos
+        totam! Dolores!
+      </p>
+      <p>
+        Korem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur,
+        placeat dolorem! Laudantium rerum eaque illo nesciunt, libero ut fugit
+        dolorem cupiditate nemo quibusdam asperiores aut, dolores laborum
+        recusandae distinctio doloremque!
+      </p>
+    </div>
+    <style>
+      .wrapper p::first-letter {
+        font-size: 2em;
+      }
+      /* .wrapper p::first-line {
+        text-decoration: underline;
+      } */
+
+      /* .wrapper p::before {
+        content: "😊";
+      }
+      .wrapper p::after {
+        content: "👀";
+      } */
+
+      /* 카운터 */
+      /* 부모요소에서 선언 */
+      .wrapper {
+        counter-reset: num;
+      }
+      .wrapper p::before {
+        counter-increment: num;
+        content: counter(num) " ";
+      }
+
+      ::selection {
+        background-color: cadetblue;
+        color: white;
+      }
+    </style>
+  </body>
+</html>

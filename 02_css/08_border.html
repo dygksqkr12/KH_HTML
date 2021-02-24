@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css - border</title>
+  </head>
+  <body>
+    <h1>Border</h1>
+
+    <div class="test"></div>
+    <style>
+      .test {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: steelblue;
+        /* border-width: 1px;
+        border-style: solid;
+        border-color: black; */
+        border: 5px solid black;
+        /* border-radius: 50% 40% 30% 20%; */
+        /* border-radius: 50% 40% 30%; */
+        /* border-radius: 50% 40%; */
+        border-radius: 50%;
+      }
+    </style>
+
+    <h2>box-shadow</h2>
+    <div class="box"></div>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: lightcoral;
+        border: 5px solid black;
+        border-radius: 10px;
+        margin: 10px auto;
+      }
+      .box:hover {
+        /* 가로offset 세로offset 번짐 그림자크기 컬러 */
+        box-shadow: 5px 5px 30px 5px gray;
+      }
+    </style>
+  </body>
+</html>
