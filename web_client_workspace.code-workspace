@@ -17,9 +17,12 @@
 		},
 		{
 			"path": "HomeWork"
+		},
+		{
+			"path": "Test"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "03_javascript"
+		"liveServer.settings.multiRootWorkspaceName": "Test"
 	}
 }
