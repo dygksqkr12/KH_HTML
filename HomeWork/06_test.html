@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test6</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+      tr,
+      td {
+        border: 1px solid black;
+      }
+      #one {
+        background-color: moccasin;
+        color: orangered;
+      }
+    </style>
+
+    <script>
+      function test1(chk) {
+        var one = document.getElementsByName("check");
+        for (var i = 0; i < one.length; i++) {
+          if (one[i] != chk) {
+            one[i].checked = false;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h3 style="text-align: center"><b>사은품 선택</b></h3>
+    <table>
+      <tr>
+        <td id="one"><b>종류</b></td>
+        <td>
+          <input
+            type="checkbox"
+            name="check"
+            id="borad"
+            onclick="test1(this);"
+          /><label for="borad">메인보드</label>
+          <input
+            type="checkbox"
+            name="check"
+            id="monitor"
+            onclick="test1(this);"
+          /><label for="monitor">모니터</label>
+          <input
+            type="checkbox"
+            name="check"
+            id="printer"
+            onclick="test1(this);"
+          /><label for="printer">프린터</label>
+          <input
+            type="checkbox"
+            name="check"
+            id="hdd"
+            onclick="test1(this);"
+          /><label for="hdd">하드디스크</label>
+          <input
+            type="checkbox"
+            name="check"
+            id="ram"
+            onclick="test1(this);"
+          /><label for="ram">메모리</label>
+          <input
+            type="checkbox"
+            name="check"
+            id="CPU"
+            onclick="test1(this);"
+          /><label for="CPU">CPU</label>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

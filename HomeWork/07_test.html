@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test7</title>
+    <style type="text/css">
+      #area {
+        width: 400px;
+        height: 150px;
+        border: 1px solid black;
+        background-color: khaki;
+      }
+    </style>
+    <script>
+      function set() {
+        var print = document.getElementsByTagName("input");
+        var str = "";
+
+        str += "구입자 : " + print[0].value + "<br>";
+        str += "구입상품 : " + print[1].value + "<br>";
+        str += "구매가격 : " + print[2].value;
+
+        area.innerHTML = str;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>실습문제 1</h1>
+    <label for="name">구매자 : </label
+    ><input type="text" name="name" id="name" value="김동현" /> <br /><br />
+    <label for="product">상품명 : </label
+    ><input type="text" name="product" id="product" value="아이폰" />
+    <br /><br />
+    <label for="price">가격 : </label
+    ><input type="number" name="price" id="price" value="100" />만원
+    <br /><br />
+    <input type="button" value="입력값 출력하기" onclick="set();" />
+    <br /><br />
+    <div id="area"></div>
+  </body>
+</html>
