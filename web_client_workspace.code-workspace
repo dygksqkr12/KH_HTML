@@ -20,9 +20,12 @@
 		},
 		{
 			"path": "Test"
+		},
+		{
+			"path": "project"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "HomeWork"
+		"liveServer.settings.multiRootWorkspaceName": "project"
 	}
 }
