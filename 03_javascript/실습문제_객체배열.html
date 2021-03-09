@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js - 실습문제 - 객체배열</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 5px;
+      }
+      h3 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>@실습문제 - 객체배열</h1>
+    <input type="button" value="실행" onclick="test1();" />
+    <h3>종합평가</h3>
+    <table>
+      <tr>
+        <th>이름</th>
+        <th>java</th>
+        <th>oracle</th>
+        <th>html5</th>
+        <th>css3</th>
+        <th>javascript</th>
+      </tr>
+      <div id="wrapper"></div>
+    </table>
+    <script>
+      /**
+       * Student생성자함수를 통해 점수데이터를 관리하세요.
+       * - java
+       * - oracle
+       * - html5
+       * - css3
+       * - javascript
+       * - getSum
+       * - getAvg : 반올림 소수점 첫째자리
+       * - toString
+       */
+      function Student(name, java, oracle, html5, css3, javascript) {
+        this.name = name;
+        this.java = java;
+        this.oracle = oracle;
+        this.html5 = html5;
+        this.css3 = css3;
+        this.javascript = javascript;
+        // this.getSum = function () {
+        //   return (
+        //     this.java + this.oracle + this.html5 + this.css3 + this.javascript
+        //   );
+        // };
+        // this.getAvg = function () {
+        //   //   return (
+        //   //     (this.java +
+        //   //       this.oracle +
+        //   //       this.html5 +
+        //   //       this.css3 +
+        //   //       this.javascript) /
+        //   //     5
+        //   //   );
+        //   return Math.round((this.getSum() / 5) * 10) / 10;
+        // };
+        // this.toString = function () {
+        //   return (
+        //     "이름=" +
+        //     this.name +
+        //     ", java=" +
+        //     this.java +
+        //     ", oracle=" +
+        //     this.oracle +
+        //     ", html5=" +
+        //     this.html5 +
+        //     ", css3=" +
+        //     this.css3 +
+        //     ", javascript=" +
+        //     this.javascript +
+        //     ", 총점=" +
+        //     this.getSum() +
+        //     ", 평점=" +
+        //     this.getAvg()
+        //   );
+        // };
+      }
+
+      Student.prototype.getSum = function () {
+        return (
+          this.java + this.oracle + this.html5 + this.css3 + this.javascript
+        );
+      };
+
+      Student.prototype.getAvg = function () {
+        return Math.round((this.getSum() / 5) * 10) / 10;
+      };
+
+      Student.prototype.toString = function () {
+        return (
+          "이름=" +
+          this.name +
+          ", java=" +
+          this.java +
+          ", oracle=" +
+          this.oracle +
+          ", html5=" +
+          this.html5 +
+          ", css3=" +
+          this.css3 +
+          ", javascript=" +
+          this.javascript +
+          ", 총점=" +
+          this.getSum() +
+          ", 평점=" +
+          this.getAvg()
+        );
+      };
+
+      function test1() {
+        //1.객체배열 생성 및 요소추가
+        var students = [];
+        students.push(new Student("김동현", 90, 56, 56, 45, 34));
+        students.push(new Student("홍길동", 45, 76, 34, 33, 56));
+        students.push(new Student("유관순", 76, 34, 54, 56, 22));
+        // var students = [
+        //   new Student("김동현", 90, 56, 56, 45, 34),
+        //   new Student("홍길동", 45, 76, 34, 33, 56),
+        //   new Student("유관순", 76, 34, 54, 56, 22),
+        // ];
+        console.log(students);
+
+        //2.반복문을 통해 객체배열 순회. 요소별 toString메소드 호출하기
+        students.forEach(function (student, i) {
+          console.log(student.toString());
+        });
+        // for (var i in students) {
+        //   console.log(
+        //     "이름 = " +
+        //       students[i].name +
+        //       ", java = " +
+        //       students[i].java +
+        //       ", oracle = " +
+        //       students[i].oracle +
+        //       ", html5 = " +
+        //       students[i].html5 +
+        //       ", css3 = " +
+        //       students[i].css3 +
+        //       ", javascript = " +
+        //       students[i].javascript +
+        //       ", 총점 = " +
+        //       students[i].getSum() +
+        //       ", 평점 = " +
+        //       students[i].getAvg()
+        //   );
+        //   wrapper.innerHTML = (
+        //     <tr>
+        //       <td>이름</td>
+        //       <td>java</td>
+        //       <td>oracle</td>
+        //       <td>html5</td>
+        //       <td>css3</td>
+        //       <td>javascript</td>
+        //     </tr>
+        //   );
+        // }
+      }
+    </script>
+  </body>
+</html>

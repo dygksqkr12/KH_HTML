@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js - object array</title>
+  </head>
+  <body>
+    <h1>Object Array</h1>
+    <h2>객체배열</h2>
+    <input type="button" value="실행" onclick="test1();" />
+    <script>
+      function test1() {
+        var pets = [
+          {
+            name: "원두",
+            breed: "푸들",
+            weight: 11,
+          },
+          {
+            name: "보나",
+            breed: "비숑",
+            weight: 3.4,
+          },
+          {
+            name: "봉숙",
+            breed: "프랜치불독",
+            weight: 5.2,
+          },
+        ];
+        console.log(pets);
+
+        for (var i in pets) {
+          //   console.log(pets[i].name);
+          pets[i].bark = function () {
+            return this.weight > 10 ? "멍멍" : "왈왈";
+          };
+          console.log(pets[i].name + "이/가" + pets[i].bark() + "짖는다.");
+        }
+        // for (var i = 0; i < pets.length; i++) {
+        //   console.log(pets[i].name);
+        // }
+      }
+    </script>
+
+    <h2>생성자함수</h2>
+    <input type="button" value="실행" onclick="test2();" />
+    <script>
+      /**
+       * (this용법4)생성자함수안의 this는 현재객체를 가리킨다.
+       * - 생성자함수의 첫글자는 대문자로 작성하는 것이 관례.
+       * - new 연산자와 함께 호출
+       */
+      function Pet(name, breed, weight) {
+        this.name = name;
+        this.breed = breed;
+        this.weight = weight;
+        // this.bark = function () {
+        //   return this.weight > 10 ? "멍멍" : "왈왈";
+        // };
+      }
+
+      //Pet의 prototype객체에 중복된 속성/메소드를 직성힌다.
+      Pet.prototype.bark = function () {
+        return this.weight > 10 ? "멍멍" : "왈왈";
+      };
+
+      function test2() {
+        var pets = [
+          new Pet("원두", "푸들", 11),
+          new Pet("보나", "비숑", 3.3),
+          new Pet("봉숙", "프랜치불독", 5.7),
+        ];
+        console.log(pets);
+
+        for (var i in pets) {
+          console.log(pets[i].name + "이/가" + pets[i].bark() + "짖는다.");
+        }
+      }
+    </script>
+  </body>
+</html>
