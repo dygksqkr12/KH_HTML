@@ -23,9 +23,12 @@
 		},
 		{
 			"path": "project"
+		},
+		{
+			"path": "dygksqkr12.github.io"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "03_javascript"
+		"liveServer.settings.multiRootWorkspaceName": "dygksqkr12.github.io"
 	}
 }
